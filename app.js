@@ -41,7 +41,7 @@ const randomizeButton = document.getElementById("randomize-button");
 randomizeButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * planes.length);
     const randomPlane = planes[randomIndex];
-    const imageUrl = `https://github.com/jenavieve-layosa/mtg-plane-display/blob/main/images/${randomPlane}.jpg`;
+    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/blob/main/images/${randomPlane}.jpg`;
 
     planeImage.src = imageUrl;
 });
