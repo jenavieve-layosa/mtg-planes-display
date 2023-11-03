@@ -1,0 +1,13 @@
+#randomize-button {
+    background-color: green;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#randomize-button:hover {
+    background-color: darkgreen;
+}
