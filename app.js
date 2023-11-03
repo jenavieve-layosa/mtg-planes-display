@@ -35,17 +35,20 @@ const planes = [
 
 ];
 
+
 const planeImage = document.getElementById("plane-image");
 const randomizeButton = document.getElementById("randomize-button");
 
 randomizeButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * planes.length);
     const randomPlane = planes[randomIndex];
-    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/blob/main/images/${randomPlane}.jpg`;
+    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/raw/main/images/${randomPlane}.jpg`;
 
+    // Set the image source directly
     planeImage.src = imageUrl;
 });
 
 // Initial random plane on page load
 randomizeButton.click();
+
 // https://jenavieve-layosa.github.io/mtg-planes-display
