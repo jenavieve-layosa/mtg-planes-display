@@ -1,5 +1,5 @@
 const planes = [
-    "amy's home",
+    "amys-home",
     "antartic research base",
     "aplan mortarium",
     "bad wolf bay", 
