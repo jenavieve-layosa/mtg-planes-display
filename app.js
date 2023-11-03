@@ -35,13 +35,28 @@ const planes = [
 
 ];
 
+let chosenPlanes = []; // Track chosen planes
+let remainingPlanes = [...planes]; // Copy of the planes array
 
 const planeImage = document.getElementById("plane-image");
 const randomizeButton = document.getElementById("randomize-button");
 
+function getRandomPlane() {
+    if (remainingPlanes.length === 0) {
+        // All planes have been picked; reset the list
+        remainingPlanes = [...planes];
+        chosenPlanes = [];
+    }
+
+    const randomIndex = Math.floor(Math.random() * remainingPlanes.length);
+    const randomPlane = remainingPlanes.splice(randomIndex, 1)[0]; // Remove the chosen plane from the remaining list
+    chosenPlanes.push(randomPlane);
+
+    return randomPlane;
+}
+
 randomizeButton.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * planes.length);
-    const randomPlane = planes[randomIndex];
+    const randomPlane = getRandomPlane();
     const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/raw/main/images/${randomPlane}.jpg`;
 
     // Set the image source directly
