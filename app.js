@@ -64,7 +64,7 @@ randomizeButton.addEventListener("click", () => {
 });
 randomizeButton.addEventListener("click", () => {
     const randomPlane = getRandomPlane();
-    const imageUrl = `https://github.com/yourusername/mtg-plane-display/raw/main/images/${randomPlane}.jpg`;
+    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/raw/main/images/${randomPlane}.jpg`;
 
     // Set the image source directly
     planeImage.src = imageUrl;
