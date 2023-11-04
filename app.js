@@ -49,7 +49,54 @@ const planes = [
 ];
 
 let chosenPlanes = []; // Track chosen planes
-let remainingPlanes = [...planes]; // Copy of the planes array
+let remainingPlanes = [
+    
+    "academy-at-tolaria-west",
+    "akoum",
+    "amys-home",
+    "antartic-research-base",
+    "aplan-mortarium",
+    "astral-arena",
+    "bad-wolf-bay", 
+    "besieged-viking-village", 
+    "bowie-base-one", 
+    "chaotic-aether",
+    "city-of-the-daleks",
+    "cliffside-market",
+    "coal-hill-school", 
+    "dalek-intensive-care",
+    "edge-of-malacol",
+    "fields-of-summer",
+    "furnace-layer", 
+    "gardens-of-tranquil-repose",
+    "gavony", 
+    "glen-elendra",
+    "hotel-of-fears", 
+    "kerblam-warehouse", 
+    "interplanner-tunnel",
+    "lake-silencio", 
+    "mondassian-colony-ship", 
+    "morpic-tide",
+    "mutual-epiphany", 
+    "new-new-york", 
+    "north-pole-research-base", 
+    "ood-sphere", 
+    "pompeii", 
+    "prime-ministers-cabinet-room", 
+    "singing-towers-of-darillium", 
+    "spectrox-mines", 
+    "the-doctors-childhood-barn", 
+    "the-doctors-tomb", 
+    "the-drum-mining-facility",
+    "the-eon-fog", 
+    "the-lux-foundation-library", 
+    "the-matrix-of-time", 
+    "the-moonbase", 
+    "the-pyramid-of-mars", 
+    "time-distortion",
+    "two-streams-facility", 
+    "unit-headquarters",
+]; // Copy of the planes array
 
 const planeImage = document.getElementById("plane-image");
 const randomizeButton = document.getElementById("randomize-button");
