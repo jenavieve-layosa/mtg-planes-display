@@ -50,7 +50,7 @@ const planes = [
 
 let chosenPlanes = []; // Track chosen planes
 let remainingPlanes = [
-    
+
     "academy-at-tolaria-west",
     "akoum",
     "amys-home",
@@ -76,7 +76,7 @@ let remainingPlanes = [
     "interplanner-tunnel",
     "lake-silencio", 
     "mondassian-colony-ship", 
-    "morpic-tide",
+    "morphic-tide",
     "mutual-epiphany", 
     "new-new-york", 
     "north-pole-research-base", 
