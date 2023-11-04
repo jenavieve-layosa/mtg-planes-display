@@ -1,10 +1,10 @@
 #randomize-button {
     background-color: green;
     color: white;
-    font-size: 24px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 7px 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
