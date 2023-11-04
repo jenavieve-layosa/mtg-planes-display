@@ -21,7 +21,7 @@ const planes = [
     "glen-elendra",
     "hotel-of-fears", 
     "kerblam-warehouse", 
-    "intreplanner-tunnel",
+    "interplanner-tunnel",
     "lake-silencio", 
     "mondassian-colony-ship", 
     "morpic-tide",
