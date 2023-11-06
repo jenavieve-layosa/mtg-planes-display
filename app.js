@@ -70,39 +70,45 @@ const planes = [
 
 ];
 
-let chosenPlanes = []; // Track chosen planes
-let remainingPlanes = [...planes]; // Copy of the planes array
+
+let planeIndex = 0; // Track the current index in the shuffled array
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+shuffleArray(planes); // Shuffle the array
 
 const planeImage = document.getElementById("plane-image");
 const randomizeButton = document.getElementById("randomize-button");
+const forwardButton = document.getElementById("forward-button");
+const backwardButton = document.getElementById("backward-button");
 
-function getRandomPlane() {
-    if (remainingPlanes.length === 0) {
-        // All planes have been picked; reset the list
-        remainingPlanes = [...planes];
-        chosenPlanes = [];
-    }
-
-    const randomIndex = Math.floor(Math.random() * remainingPlanes.length);
-    const randomPlane = remainingPlanes.splice(randomIndex, 1)[0]; // Remove the chosen plane from the remaining list
-    chosenPlanes.push(randomPlane);
-
-    return randomPlane;
+function displayPlane(index) {
+    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/raw/main/images/${randomPlane}.jpg`;
+    planeImage.src = imageUrl;
 }
 
 randomizeButton.addEventListener("click", () => {
-    const randomPlane = getRandomPlane();
-    const imageUrl = `https://github.com/jenavieve-layosa/mtg-planes-display/raw/main/images/${randomPlane}.jpg`;
-
-    // Set the image source directly
-    planeImage.src = imageUrl;
-
-    // Display the plane name
-    const planeNameElement = document.getElementById("plane-name");
-    planeNameElement.textContent = `Selected Plane: ${randomPlane}`;
+    displayPlane(planeIndex);
 });
 
-// Initial random plane on page load
-randomizeButton.click();
+forwardButton.addEventListener("click", () => {
+    planeIndex = (planeIndex + 1) % planes.length; // Move forward in the array
+    displayPlane(planeIndex);
+});
+
+backwardButton.addEventListener("click", () => {
+    planeIndex = (planeIndex - 1 + planes.length) % planes.length; // Move backward in the array
+    displayPlane(planeIndex);
+});
+
+// Initial display of the first plane on page load
+displayPlane(planeIndex);
+
 
 // https://jenavieve-layosa.github.io/mtg-planes-display
+
