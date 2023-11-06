@@ -105,4 +105,4 @@ randomizeButton.addEventListener("click", () => {
 // Initial random plane on page load
 randomizeButton.click();
 
-// https://jenaviev-layosa.github.io/mtg-planes-display
+// https://jenavieve-layosa.github.io/mtg-planes-display
