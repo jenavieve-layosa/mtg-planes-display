@@ -33,7 +33,7 @@ const planes = [
     "littjara",
     "minamo", 
     "mondassian-colony-ship", 
-    "morpic-tide",
+    "morphic-tide",
     "Mount-keralia",
     "mutual-epiphany", 
     "naar-isle",
